@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <title>Frontend Mentor | Multi-step form</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Frontend Mentor | Multi-step form</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  <!-- Sidebar start -->
-   <main>
-    <aside class="sidebar">
-      <ul>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sidebar start -->
+    <main>
+      <aside class="sidebar">
+        <ul>
           <li>
-            <span >1</span>
+            <span>1</span>
             <div class="step-title">
               <p>Step 1</p>
               <p>Your info</p>
-
             </div>
           </li>
           <li>
@@ -33,7 +45,6 @@
             <div class="step-title">
               <p>Step 2</p>
               <p>Select plan</p>
-
             </div>
           </li>
           <li>
@@ -41,7 +52,6 @@
             <div class="step-title">
               <p>Step 3</p>
               <p>Add-ons</p>
-
             </div>
           </li>
           <li>
@@ -49,13 +59,12 @@
             <div class="step-title">
               <p>Step 4</p>
               <p>Summary</p>
-
             </div>
           </li>
-      </ul>
-    </aside>
+        </ul>
+      </aside>
 
-  <!-- Step 1
+      <!-- Step 1
   Your info
 
   Step 2
@@ -67,31 +76,51 @@
   Step 4
   Summary -->
 
-  <!-- Sidebar end -->
+      <!-- Sidebar end -->
 
-  <!-- Step 1 start -->
-   <section class="info">
-    <div class="card">
-      <h1>Personal info</h1>
-      <h4>Please provide your name, email address, and phone number.</h4>
-      <form method="post" >
-        <label for="name">Name</label>
-        <input type="text" id="name" placeholder="e.g Stephen King" required>
-        <label for="email">Email Address</label>
-        <input type="email" id="email" placeholder="e.g stephenking@lorem.com" required>
-        <label for="phone-number">Phone Number</label>
-        <input type="text" id="phone-number" placeholder="  e.g. +1 234 567 890" required>
-      </form>
-    </div>
-   
-    <div class="next-step-btn">
-      <button >Next Step</button>
+      <!-- Step 1 start -->
+      <div>
+        <section class="info">
+          <form method="post" id="form">
+            <div class="card">
+              <h1>Personal info</h1>
+              <h4>
+                Please provide your name, email address, and phone number.
+              </h4>
 
-    </div>
-   </section>
-  </main>
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="e.g Stephen King"
+                required
+              />
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="e.g stephenking@lorem.com"
+                required
+              />
+              <label for="phone-number">Phone Number</label>
+              <input
+                type="text"
+                id="phone-number"
+                placeholder="  e.g. +1 234 567 890"
+                required
+              />
+              <div class="next-step-btn">
+                <button type="submit">Next Step</button>
+              </div>
+            </div>
 
-<!-- 
+            <!--Second section for the second form-->
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <!-- 
   Personal info
   Please provide your name, email address, and phone number.
 
@@ -106,11 +135,11 @@
 
   Next Step -->
 
-  <!-- Step 1 end -->
+    <!-- Step 1 end -->
 
-  <!-- Step 2 start -->
+    <!-- Step 2 start -->
 
-  <!-- Select your plan
+    <!-- Select your plan
   You have the option of monthly or yearly billing.
 
   Arcade
@@ -128,10 +157,10 @@
   Go Back
   Next Step -->
 
-  <!-- Step 2 end -->
+    <!-- Step 2 end -->
 
-  <!-- Step 3 start -->
-<!-- 
+    <!-- Step 3 start -->
+    <!-- 
   Pick add-ons
   Add-ons help enhance your gaming experience.
 
@@ -150,35 +179,36 @@
   Go Back
   Next Step -->
 
-  <!-- Step 3 end -->
+    <!-- Step 3 end -->
 
-  <!-- Step 4 start -->
-<!-- 
+    <!-- Step 4 start -->
+    <!-- 
   Finishing up
   Double-check everything looks OK before confirming. -->
 
-  <!-- Dynamically add subscription and add-on selections here -->
+    <!-- Dynamically add subscription and add-on selections here -->
 
-  <!-- Total (per month/year)
+    <!-- Total (per month/year)
 
   Go Back
   Confirm -->
 
-  <!-- Step 4 end -->
+    <!-- Step 4 end -->
 
-  <!-- Step 5 start -->
+    <!-- Step 5 start -->
 
-  <!-- Thank you!
+    <!-- Thank you!
 
   Thanks for confirming your subscription! We hope you have fun 
   using our platform. If you ever need support, please feel free 
   to email us at support@loremgaming.com.
 
   Step 5 end -->
-  
-  <!-- <div class="attribution">
+
+    <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
