@@ -15,6 +15,9 @@
       href="./assets/images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/info.css" />
+    <link rel="stylesheet" href="assets/css/plan-style.css" />
+
     <title>Frontend Mentor | Multi-step form</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -34,28 +37,28 @@
       <aside class="sidebar">
         <ul>
           <li>
-            <span>1</span>
+            <span id="number-animation-1" class="step-number active">1</span>
             <div class="step-title">
               <p>Step 1</p>
               <p>Your info</p>
             </div>
           </li>
           <li>
-            <span>2</span>
+            <span id="number-animation-2" class="step-number">2</span>
             <div class="step-title">
               <p>Step 2</p>
               <p>Select plan</p>
             </div>
           </li>
           <li>
-            <span>3</span>
+            <span id="number-animation-3" class="step-number">3</span>
             <div class="step-title">
               <p>Step 3</p>
               <p>Add-ons</p>
             </div>
           </li>
           <li>
-            <span>4</span>
+            <span id="number-animation-4" class="step-number">4</span>
             <div class="step-title">
               <p>Step 4</p>
               <p>Summary</p>
@@ -82,7 +85,7 @@
       <div>
         <section class="info">
           <form method="post" id="form">
-            <div class="card-container">
+            <div class="card-container active">
               <div class="card">
                 <h1>Personal info</h1>
                 <h4>
@@ -110,14 +113,15 @@
                   placeholder="  e.g. +1 234 567 890"
                   required
                 />
-                <div class="next-step-btn">
-                  <button type="button" class="next-btn">Next Step</button>
+                <div class="btns">
+                  <button style="color: white;" class="prev-btn" type="button">Go back</button>
+                  <button class="next-step-btn" type="button">Next Step</button>
                 </div>
               </div>
             </div>
 
             <!--Second section for the second form-->
-            <div class="card-container active second-step">
+            <div class="card-container  second-step">
               <div class="card">
                 <h1>Select your plan</h1>
                 <h4>You have the option of monthly or yearly billing</h4>
@@ -157,8 +161,10 @@
                   <p>Yearly</p>
                 </div>
 
-                <div class="next-step-btn">
-                  <button type="button">Next Step</button>
+                <div class="btns">
+                  <button class="prev-btn" type="button">Go back</button>
+
+                  <button class="next-step-btn" type="button">Next Step</button>
                 </div>
               </div>
             </div>
@@ -168,7 +174,6 @@
     </main>
   <!-- Step 1 start -->
   
-  </main>
 
     <!-- 
   Personal info

@@ -70,6 +70,11 @@ main {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  transition: 0.5s;
+}
+span.active {
+  background-color: var(--magnolia);
+  color: #007bff; 
 }
 .sidebar ul li .step-title p:first-of-type {
   color: var(--cool-gray);
@@ -84,46 +89,16 @@ main {
 
 /* Start Info section */
 
-.info {
-  margin: 45px 20px 0px 70px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
+.info .btns {
+   
+  display: flex;  justify-content: space-between;
+  align-items: center;
+  background-color: red;
+
+  align-items: center;
+  
 }
-.info h1 {
-  font-size: 30px;
-  color: var(--marine-blue);
-  margin-bottom: 20px;
-}
-.info h4 {
-  font-weight: 200;
-  color: var(--cool-gray);
-}
-.info form {
-  margin: 50px 0;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-.info form label {
-  color: var(--marine-blue);
-  margin-bottom: 5px;
-  font-size: 15px;
-}
-.info form input {
-  border: 1px solid var(--light-gray);
-  border-radius: 7px;
-  padding: 10px;
-  margin-bottom: 20px;
-}
-.info .next-step-btn {
-  /*position: absolute;
-    bottom: 40px;
-    right: 0;*/
-  display: flex;
-  justify-content: end;
-}
-.next-step-btn button {
+.next-step-btn {
   background-color: var(--marine-blue);
   color: white;
   border: none;
@@ -135,8 +110,20 @@ main {
   cursor: pointer;
     transition: 0.5s;
 }
-  .next-step-btn button:hover{
+  .next-step-btn:hover{
     transform: scale(1.1);
+  }
+  .prev-btn {
+    background-color: var(--white);
+  color: black;
+  border: none;
+  height: 50px;
+  border-radius: 10px;
+  font-family: "Ubuntu", sans-serif;
+  padding: 10px;
+  width: 120px;
+  cursor: pointer;
+    transition: 0.5s;
   }
 
 .card {
@@ -148,132 +135,10 @@ main {
 .card-container {
   display: none;
 }
-
 .active {
   display: flex;
-}
+} 
 
-.payement-methods {
-  display: flex;
-  gap: 1em;
-  margin-top: 1em;
-  justify-content: center;
-}
-
-.payement-card {
-  border: 1px solid var(--cool-gray);
-  width: 170px;
-  border-radius: 10px;
-  padding-left: 1em;
-  padding-top: 1em;
-  padding-bottom: 1.8em;
-}
-
-.payement-card:hover {
-  border: 1px solid var(--marine-blue);
-}
-
-.payement-title {
-  color: var(--marine-blue);
-  font-weight: 500;
-  padding-top: 2em;
-}
-
-.price {
-  color: var(--cool-gray);
-  padding-top: 0.3em;
-}
-
-/*The toggle switch*/
-.toggle-container {
-  background-color: var(--light-gray);
-  margin-top: 2em;
-  border-radius: 7px;
-  display: flex;
-  gap: 1em;
-  justify-content: center;
-  align-items: center;
-  padding: .4em;
-}
-
-.toggle-container p {
-  color: var(--marine-blue);
-}
-
-.toggle-switch {
-  position: relative;
-  display: inline-block;
-  width: 80px;
-  height: 40px;
-  cursor: pointer;
-}
-
-.toggle-switch input[type="checkbox"] {
-  display: none;
-}
-
-.toggle-switch-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--marine-blue) ;/*#ddd*/
-  border-radius: 20px;
-  box-shadow: inset 0 0 0 2px #ccc;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.toggle-switch-handle {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 30px;
-  height: 30px;
-  background-color: #fff;
-  border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out;
-}
-
-.toggle-switch::before {
-  content: "";
-  position: absolute;
-  top: -25px;
-  right: -35px;
-  font-size: 12px;
-  font-weight: bold;
-  color: #aaa;
-  text-shadow: 1px 1px #fff;
-  transition: color 0.3s ease-in-out;
-}
-
-.toggle-switch input[type="checkbox"]:checked + .toggle-switch-handle {
-  transform: translateX(45px);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 0 0 3px #05c46b;
-}
-
-.toggle-switch input[type="checkbox"]:checked + .toggle-switch-background {
-  background-color: #05c46b;
-  box-shadow: inset 0 0 0 2px #04b360;
-}
-
-.toggle-switch input[type="checkbox"]:checked + .toggle-switch:before {
-  content: "On";
-  color: #05c46b;
-  right: -15px;
-}
-
-.toggle-switch
-  input[type="checkbox"]:checked
-  + .toggle-switch-background
-  .toggle-switch-handle {
-  transform: translateX(40px);
-}
-
-.second-step .next-step-btn {
-  margin-top: 1em;
-}
 
 /* End Info Section */
 
@@ -319,13 +184,16 @@ main {
     border-radius: 10px;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
   }
-  .info .next-step-btn {
+  .info .btns {
     bottom: 0;
     background-color: white;
     width: 100%;
     padding: 10px;
     display: flex;
     justify-content: end;
+    justify-content: space-between;
+
+    align-items: center;
   }
 }
 /* End media Section */

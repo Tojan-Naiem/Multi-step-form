@@ -8,11 +8,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const showStep = (stepIndex) => {
     steps.forEach((step, index) => {
-      console.log(step, index);
       step.classList.toggle("active", index === stepIndex);
     });
+ 
+    document.querySelectorAll(".step-number").forEach((span) => {
+      span.classList.remove("active");
+    });
+  
+    const currentStepNumber = document.querySelector(`#number-animation-${stepIndex + 1}`);
+    if (currentStepNumber) {
+      currentStepNumber.classList.add("active");
+    }
   };
-  //console.log(showStep(1));
+
 
   const validateStep = (curStep) => {
     const inputs = steps[curStep].querySelectorAll("input");
@@ -27,10 +35,18 @@ document.addEventListener("DOMContentLoaded", () => {
     return isValid;
   };
 
-  document.querySelectorAll(".next-btn").forEach((button) => {
+  document.querySelectorAll(".next-step-btn").forEach((button) => {
     button.addEventListener("click", () => {
       if (validateStep(currentStep)) {
         currentStep++;
+        showStep(currentStep);
+      }
+    });
+  });
+  document.querySelectorAll(".prev-btn").forEach((button) => {
+    button.addEventListener("click", () => {
+      if (currentStep > 0) {
+        currentStep--;
         showStep(currentStep);
       }
     });
@@ -47,3 +63,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
