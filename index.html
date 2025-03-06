@@ -82,39 +82,86 @@
       <div>
         <section class="info">
           <form method="post" id="form">
-            <div class="card">
-              <h1>Personal info</h1>
-              <h4>
-                Please provide your name, email address, and phone number.
-              </h4>
+            <div class="card-container">
+              <div class="card">
+                <h1>Personal info</h1>
+                <h4>
+                  Please provide your name, email address, and phone number.
+                </h4>
 
-              <label for="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                placeholder="e.g Stephen King"
-                required
-              />
-              <label for="email">Email Address</label>
-              <input
-                type="email"
-                id="email"
-                placeholder="e.g stephenking@lorem.com"
-                required
-              />
-              <label for="phone-number">Phone Number</label>
-              <input
-                type="text"
-                id="phone-number"
-                placeholder="  e.g. +1 234 567 890"
-                required
-              />
-              <div class="next-step-btn">
-                <button type="submit">Next Step</button>
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="e.g Stephen King"
+                  required
+                />
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="e.g stephenking@lorem.com"
+                  required
+                />
+                <label for="phone-number">Phone Number</label>
+                <input
+                  type="text"
+                  id="phone-number"
+                  placeholder="  e.g. +1 234 567 890"
+                  required
+                />
+                <div class="next-step-btn">
+                  <button type="button" class="next-btn">Next Step</button>
+                </div>
               </div>
             </div>
 
             <!--Second section for the second form-->
+            <div class="card-container active second-step">
+              <div class="card">
+                <h1>Select your plan</h1>
+                <h4>You have the option of monthly or yearly billing</h4>
+
+                <div class="payement-methods">
+                  <div class="payement-card">
+                    <img
+                      src="./assets/images/icon-arcade.svg"
+                      alt="arcade icon"
+                    />
+                    <p class="payement-title">Arcade</p>
+                    <p class="price">$9/mo</p>
+                  </div>
+                  <div class="payement-card">
+                    <img
+                      src="./assets/images/icon-advanced.svg"
+                      alt="advanced icon"
+                    />
+                    <p class="payement-title">Advanced</p>
+                    <p class="price">$12/mo</p>
+                  </div>
+                  <div class="payement-card">
+                    <img src="./assets/images/icon-pro.svg" alt="pro icon" />
+                    <p class="payement-title">Pro</p>
+                    <p class="price">$15/mo</p>
+                  </div>
+                </div>
+
+                <div class="toggle-container">
+                  <p>Monthly</p>
+                  <label class="toggle-switch">
+                    <input type="checkbox" />
+                    <div class="toggle-switch-background">
+                      <div class="toggle-switch-handle"></div>
+                    </div>
+                  </label>
+                  <p>Yearly</p>
+                </div>
+
+                <div class="next-step-btn">
+                  <button type="button">Next Step</button>
+                </div>
+              </div>
+            </div>
           </form>
         </section>
       </div>

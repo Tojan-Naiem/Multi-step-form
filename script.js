@@ -1,13 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("form");
 
-  const steps = Array.from(document.querySelectorAll(".card"));
+  const steps = Array.from(document.querySelectorAll(".card-container"));
+  console.log(steps);
 
   let currentStep = 0;
 
+  const showStep = (stepIndex) => {
+    steps.forEach((step, index) => {
+      console.log(step, index);
+      step.classList.toggle("active", index === stepIndex);
+    });
+  };
+  //console.log(showStep(1));
+
   const validateStep = (curStep) => {
     const inputs = steps[curStep].querySelectorAll("input");
-    console.log(inputs);
     let isValid = true;
 
     inputs.forEach((input) => {
@@ -18,6 +26,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     return isValid;
   };
+
+  document.querySelectorAll(".next-btn").forEach((button) => {
+    button.addEventListener("click", () => {
+      if (validateStep(currentStep)) {
+        currentStep++;
+        showStep(currentStep);
+      }
+    });
+  });
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
